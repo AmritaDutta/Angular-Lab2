@@ -3,10 +3,10 @@ import "./polyfills";
 import { enableProdMode } from "@angular/core";
 import { platformBrowserDynamic } from "@angular/platform-browser-dynamic";
 
-import { CustomerModule } from "./CustomerApp/CustomerApp.module";
+import { MainModule } from "./CustomerApp/CustomerApp.MainModule";
 
 platformBrowserDynamic()
-  .bootstrapModule(CustomerModule)
+  .bootstrapModule(MainModule)
   .then(ref => {
     // Ensure Angular destroys itself on hot reloads.
     if (window["ngRef"]) {

@@ -1,9 +1,8 @@
 import { Component } from "@angular/core";
-import { Customer } from "./CustomerApp.model";
+import { Customer } from "./CustomerApp.Customermodel";
 
 @Component({
-  selector: "my-app",
-  templateUrl: "./CustomerApp.view.html"
+  templateUrl: "./CustomerApp.Customerview.html"
 })
 export class CustomerComponent {
   title = "CustomerApplication";
