@@ -2,12 +2,12 @@
 	<h1> AMY PROJECTS </h1>
 </div>
 <table>
-	<td style="background-color:orange; ">
-		<a [routerlink]="['Home']">Home </a>
-		<a [routerlink]="['Customer']"> Customer </a>
-		<a [routerlink]="['Supplier']"> Supplier </a>
+	<td style="background-color:orange; padding:60px; font-size:25px; ">
+		<a [routerLink]="['Home']">Home </a> <br>
+		<a [routerLink]="['Customer']"> Customer </a> <br>
+		<a [routerLink]="['Supplier']"> Supplier </a>
 	</td>
 	<td>
-		<Router-Outlet></Router-Outlet>
+		<router-outlet></router-outlet>
 	</td>
 </table>
