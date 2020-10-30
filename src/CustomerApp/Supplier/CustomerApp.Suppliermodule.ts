@@ -1,14 +1,12 @@
 import { NgModule } from "@angular/core";
-import { BrowserModule } from "@angular/platform-browser";
+import { CommonModule } from "@angular/common";
 import { FormsModule } from "@angular/forms";
 import { RouterModule } from "@angular/router";
-import { MainRoute } from "../../CustomerApp/Router/CustomerApp.MainRouter";
-import { HomeComponent } from "../../CustomerApp/Home/CustomerApp.Homecomponent";
-import { MasterPageComponent } from "../../CustomerApp/Home/CustomerApp.MasterPagecomponent";
+import { SupplierComponent } from "../../CustomerApp/Supplier/CustomerApp.Suppliercomponent";
 
 @NgModule({
-  imports: [RouterModule.forRoot(MainRoute), BrowserModule, FormsModule],
-  declarations: [HomeComponent, MasterPageComponent],
-  bootstrap: [MasterPageComponent]
+  imports: [RouterModule.forChild(SupplierRoute), CommonModule, FormsModule],
+  declarations: [SupplierComponent],
+  bootstrap: [SupplierComponent]
 })
-export class MainModule {}
+export class SupplierModule {}
