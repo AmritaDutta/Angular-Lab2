@@ -1,6 +1,6 @@
-<form [FormGroup]="Customermodel.FormCustomerGroup">
-	Customer Code: <input FormControlName = "FormCodeControl", [(ngModel)]="CustomerModel.CustomerCode" type=text/> <br>
-Customer Name: <input FormControlName = "FormNameControl", [(ngModel)]="CustomerModel.CustomerName" type=text/> <br>
+<form [formGroup]="Customermodel.FormCustomerGroup">
+	Customer Code: <input formControlName = "FormCodeControl", [(ngModel)]="CustomerModel.CustomerCode" type=text/> <br>
+Customer Name: <input formControlName = "FormNameControl", [(ngModel)]="CustomerModel.CustomerName" type=text/> <br>
 Customer Amount: <input [(ngModel)]="CustomerModel.CustomerAmount" type=text/> <br>
 	<input (click)="Add()" type="button" value="Add"><br>
 </form>
