@@ -20,13 +20,13 @@ export class Customer {
       new FormControl("", Validators.required)
     );
 
-    var ValidationCollection = [];
-    ValidationCollection.push("", Validators.required);
-    ValidationCollection.push(Validators.pattern("^[0-9]{4,4}$"));
+    //var validationcollection = [];
+    // validationcollection.push("", Validators.required);
+    // validationcollection.push(Validators.pattern("^[0-9]{4,4}$"));
 
     this.FormCustomerGroup.addControl(
       "FormCodeControl",
-      new FormControl("", Validators.compose(ValidationCollection))
+      new FormControl("", Validators.required)
     );
   }
 }
