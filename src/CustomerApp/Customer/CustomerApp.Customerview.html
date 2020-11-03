@@ -5,9 +5,12 @@ Customer Amount: <input [(ngModel)]="CustomerModel.CustomerAmount" [ngModelOptio
 	<input [disabled]= "!(CustomerModel.FormCustomerGroup.valid)" (click)="Add()" type="button" value="Add"><br>
 </form>
 
-	<div [hidden]="!(hasError('pattern', 'FormCodeControl'))">Customer Code format is not proper</div>
-	<div [hidden]="!(hasError('required', 'FormCodeControl'))">Customer Code is required</div>
-	<div [hidden]="!(hasError('required', 'FormNameControl'))">Customer Name is required</div>
+	<div *ngIf="CustomerModel.FormCustomerGroup.dirty" [hidden]="!(hasError('pattern', 'FormCodeControl'))">Customer
+		Code format is not proper</div>
+	<div *ngIf="CustomerModel.FormCustomerGroup.dirty" [hidden]="!(hasError('required', 'FormCodeControl'))">Customer
+		Code is required</div>
+	<div *ngIf="CustomerModel.FormCustomerGroup.dirty" [hidden]="!(hasError('required', 'FormNameControl'))">Customer
+		Name is required</div>
 
 	<table>
 		<tr>
