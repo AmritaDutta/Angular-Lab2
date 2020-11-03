@@ -12,9 +12,5 @@ export class CustomerComponent {
     this.CustomerModels.push(this.CustomerModel);
     this.CustomerModel = new Customer();
   }
- // hasError(typeofvalidator: string, controlname: string): Boolean {
-   // return this.CustomerModel.FormCustomerGroup.contains[controlname].hasError(
-    //  typeofvalidator
-    //);
-  }
+  
 }
