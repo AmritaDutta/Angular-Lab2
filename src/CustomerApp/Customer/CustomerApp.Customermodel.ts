@@ -3,7 +3,8 @@ import {
   FormGroup,
   FormControl,
   Validators,
-  FormBuilder
+  FormBuilder,
+  ValidatorFn
 } from "@angular/forms";
 
 export class Customer {
@@ -20,13 +21,13 @@ export class Customer {
       new FormControl("", Validators.required)
     );
 
-    //var validationcollection = [];
-    // validationcollection.push("", Validators.required);
-    // validationcollection.push(Validators.pattern("^[0-9]{4,4}$"));
+    var validations: ValidatorFn[] = [];
+    validations.push(Validators.required);
+    validations.push(Validators.pattern("^[0-9]{4,4}$"));
 
     this.FormCustomerGroup.addControl(
       "FormCodeControl",
-      new FormControl("", Validators.required)
+      new FormControl("", Validators.compose(validations))
     );
   }
 }
